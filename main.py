@@ -1,9 +1,9 @@
 from tkinter import *
-
 root = Tk()
 
-root.minsize("750", "550")
-root.maxsize("750", "550")
+root.minsize("850", "550")
+
+
 root.title("TextUtils")
 
 # ==Functions==
@@ -73,63 +73,54 @@ def clear_text():
     textbox.delete("1.0", "end")
 
 
-# ==Nav Bar==
-
-navf = Frame(root, bg="grey", height="40")
-navf.pack(side=TOP, fill=X)
-
-home = Button(navf, text="Home", bg="grey",fg="white", command=home, borderwidth=0)
-home.place(x=50, y=9)
 
 
-
-# ==Body of the GUI==
-
-
-heading = Label(root, text="Welcome to Text Utils",fg="red", font=("Helvetica", 20)) #==Heading==
-heading.pack(side = TOP,anchor="center",pady="5")
-
+# ==Body of the GUI== #
+# ==Frames== #
+button_frame = Frame(root,bd = 2,relief = RIDGE,bg = "white",width = 200)
+button_frame.pack(side = RIGHT,fill = Y)
 
 
 # ==Text Box and Scroll Bar==
 scrollbar = Scrollbar(root)
-scrollbar.place(x=650, y=99, height=235)
+scrollbar.pack(side = RIGHT, fill=Y)
 
 textbox = Text(root, bg="white", fg="red", width="50", height="10", font=("Helvetica", 15), yscrollcommand=scrollbar.set)
-textbox.place(x = 95,y = 100)
+textbox.pack(fill= BOTH, expand=1)
 scrollbar.config(command=textbox.yview)
 
 
 
 # ==Creating Fame for our Buttons==
-button_frame = Frame(root, bg="grey", width="350",height="300", borderwidth="10",pady = 10)
-button_frame.place(x = 150,y = 360)
 
 
-# ==Buttons==
 
-Convert_to_Lowercase = Button(button_frame, text="Convert to Lowercase",cursor="hand2",command=Convert_to_Lowercase, bg="blue", fg="white")
-Convert_to_Lowercase.grid(row=0, column=1, padx="10", pady="10")
+# ==Buttons and Labels==
+Label_Convert = Label(button_frame, text="Convert To",compound = LEFT,padx = 5 ,anchor="w",font=("times new roman", 20, "bold"),bg="white", bd=3).pack(side=TOP, fill=X)
+Convert_to_Lowercase = Button(button_frame, text="Lower Case",compound = LEFT,padx = 5 ,anchor="w",command = Convert_to_Lowercase ,font=("times new roman", 20, "bold"),bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
+                        
+convert_to_uppercase = Button(button_frame, text="Upper Case",compound = LEFT,padx = 5 ,anchor="w",command = Convert_to_Uppercase,font=("times new roman", 20, "bold"),bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
 
-convert_to_uppercase = Button(button_frame, text="Convert to Uppercase",cursor="hand2", command=Convert_to_Uppercase, bg="blue", fg="white")
-convert_to_uppercase.grid(row=0, column=2,padx="10",pady="10")
+Label_Remove = Label(button_frame, text="Remove",compound = LEFT,padx = 5 ,anchor="w",font=("times new roman", 20, "bold"),bg="white", bd=3).pack(side=TOP, fill=X)
 
-removepunc = Button(button_frame, text="Remove Punctuation",cursor="hand2",command=removepunc, bg="blue", fg="white") #==Remove Punctuations Button==
-removepunc.grid(row = 0, column = 3,padx="10",pady="10")
+removepunc = Button(button_frame, text="Punctuations",compound = LEFT,padx = 5 ,anchor="w",command = removepunc,font=("times new roman", 20, "bold"),
+                            bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
+
+remove_all_lines = Button(button_frame, text="All Lines",compound = LEFT,padx = 5 ,anchor="w",command = remove_all_lines,font=("times new roman", 20, "bold"),
+                            bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
+
+remove_extraspace = Button(button_frame, text="Extra Spaces",  compound=LEFT, padx=5, anchor="w",command = extra_space_remover, font=("times new roman", 20, "bold"),
+                              bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
+                            
+remove_numbers = Button(button_frame, text="Numbers",compound = LEFT,padx = 5 ,anchor="w",command = remove_numbers,font=("times new roman", 20, "bold"),
+                            bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
+
+clear_text = Button(button_frame, text="Clear",compound = LEFT,padx = 5 ,anchor="w",command = clear_text,font=("times new roman", 20, "bold"),
+                            bg="white", bd=3, cursor="hand2").pack(side=TOP, fill=X)
 
 
-remove_all_lines = Button(button_frame, text="Remove All Lines",cursor="hand2",command=remove_all_lines, bg="blue", fg="white")
-remove_all_lines.grid(row = 2, column = 1,padx="10",pady="10")
-
-remove_extraspace = Button(button_frame, text="Remove Extra Space",cursor="hand2",command=extra_space_remover, bg="blue", fg="white")
-remove_extraspace.grid(row = 2, column = 2,padx="10",pady="10")
-
-remove_numbers = Button(button_frame, text="Remove Numbers",cursor="hand2",command=remove_numbers, bg="blue", fg="white")
-remove_numbers.grid(row = 2, column = 3,padx="10",pady="10")
-
-
-clear_text = Button(button_frame, text="Clear Text",cursor="hand2",command=clear_text, bg="blue", fg="white")
-clear_text.grid(row = 4, column = 2,padx="10",pady="10")
+# clear_text = Button(button_frame, text="Clear Text",cursor="hand2",command=clear_text, bg="blue", fg="white")
+# clear_text.grid(row = 4, column = 2,padx="10",pady="10")
 
 
 
