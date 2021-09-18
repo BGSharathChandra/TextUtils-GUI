@@ -5,6 +5,9 @@
 <li>Convert the Text to Lower Case</li>
 <li>Convert the Text to Upper Case</li>
 <li>Remove Punctuations</li>
+<li>Remove All Lines</li>
+<li>Remove Extra Spaces</li>
+<li>Remove Numbers</li>
 <li>Clear Text</li>
 </ul>
 
@@ -14,17 +17,37 @@
 
 <p>Features Which will be Added Soon:</p>
 <ul>
-<li>Changing the Colour and the Mouse Cursor to a Hand when it Enters a Button</li>
-<li>Adding the Option to Remove Extra Lines and Spaces</li>
+<li>Emailing Option</li>
+<li>Option to Cut, Copy</li>
 <li>Adding Option to Save the Analyzed Text</li>
-<li>Adding about Page to the GUI</li>
 </ul>
 
-<p>If you see the GUI you will See a Navbar with only one Button which is "Home" but the "About" Button will Be added soon</p>
 
 <p>The Code you Find in the Main Branch is the Code of the Latest Version and the Other Codes and also the Latest Code can be found in the Releases Section</p>
 
 <p>If you Want to Use the Code to Analyze the Text only and not the Code then Download the exe file </p>
+<hr>
+<br>
 
+<h1>Versions and their Details</h1>
 
-<p>This Repository is Under MIT License</p>
+<h2>v1.3 -Minor Update</h2>
+<p>The Only Update Made is in the Design of the GUI. NO OTHER FEATURE IS ADDED</p>
+<hr>
+<br>
+
+<h2>v1.2 - Major Update</h2>
+<p>There are been Major Changes in Design and More Actions to Perform the Text are added which are</p>
+<ul>
+<li>Remove All Lines</li>
+<li>Remove Extra Spaces</li>
+<li>Remove Numbers</li>
+</ul>
+<hr>    
+<br>
+<h2>v1.1 -Source Code of the Project</h2>
+<p>This is the Source Code of the Project and also the Basic Code of the Project.</p>
+<hr>
+<br>
+
+<p><b>This Repository is Unlicensed<b></p>
