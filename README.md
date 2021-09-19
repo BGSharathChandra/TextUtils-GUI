@@ -19,7 +19,6 @@
 <ul>
 <li>Emailing Option</li>
 <li>Option to Cut, Copy</li>
-<li>Adding Option to Save the Analyzed Text</li>
 </ul>
 
 
@@ -30,6 +29,17 @@
 <br>
 
 <h1>Versions and their Details</h1>
+
+<h2>v1.4-Minor Update</h2>
+<p>Two More Operations Which are:</p>
+<ul>
+<li>Open File</li>
+<li>Save File</li>
+</ul>
+
+<p>and the Hovering Effect have Benn added</p>
+<hr>
+<br>
 
 <h2>v1.3 -Minor Update</h2>
 <p>The Only Update Made is in the Design of the GUI. NO OTHER FEATURE IS ADDED</p>
